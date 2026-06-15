@@ -5,132 +5,343 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honorato & De Paula | Advocacia Estratégica</title>
     
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CAMINHO CORRIGIDO E COM ANTI-CACHE -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
     
-    <!-- Fontes Premium -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero-section">
-        <div class="hero-overlay"></div>
-        
-        <nav class="nav-bar">
-            <a href="#" class="logo-link">
-                <img src="assets/img/logo.png" alt="Honorato & De Paula Logo" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#atuacao">Áreas de Atuação</a></li>
-                <li><a href="#profissionais">Sócias</a></li>
-                <li><a href="#institucional">O Escritório</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            
-            <img class="menu-icon" id="mobile-menu-btn" src="assets/img/button-menu.svg" alt="Menu">
-        </nav>
-        
-        <div class="content" data-aos="fade-right" data-aos-duration="1200">
-            <h1>Crescer sem segurança jurídica não é estratégia. <br><span class="highlight-text">É risco.</span></h1>
-            <p id="adv">O jurídico não entra depois. Ele antecipa riscos e sustenta o crescimento do seu negócio.</p>
-            <a href="https://wa.me/5541999999999?text=Olá,%20gostaria%20de%20falar%20sobre%20assessoria%20preventiva" class="btn-primary">
-                Falar com um Especialista
-            </a>
+
+    <!-- ===== NAVEGAÇÃO ===== -->
+    <nav class="nav-bar" id="navbar">
+        <a href="#" class="logo-link" aria-label="Honorato & De Paula — Início">
+            <img src="assets/img/logo.png" alt="Honorato & De Paula" class="logo-img">
+        </a>
+
+        <ul class="nav-links" id="nav-links" role="navigation" aria-label="Menu principal">
+            <li><a href="#atuacao">Áreas de Atuação</a></li>
+            <li><a href="#profissionais">Sócias</a></li>
+            <li><a href="#institucional">O Escritório</a></li>
+            <li><a href="#contato" class="nav-cta">Fale Conosco</a></li>
+        </ul>
+
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="inicio">
+        <div class="hero-bg-mark" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow fade-in">Advocacia Empresarial Estratégica</p>
+            <h1 class="fade-in">
+                Crescer sem segurança<br>
+                jurídica não é estratégia.<br>
+                <em>É risco.</em>
+            </h1>
+            <p class="hero-sub fade-in">
+                O jurídico preventivo antecipa passivos, protege contratos e sustenta cada decisão do seu negócio — antes que o problema apareça.
+            </p>
+            <div class="hero-actions fade-in">
+                <a href="https://wa.me/5541999999999?text=Olá,%20gostaria%20de%20falar%20sobre%20assessoria%20preventiva" class="btn-primary" target="_blank" rel="noopener">
+                    Agendar Consulta
+                </a>
+                <a href="#atuacao" class="btn-ghost">
+                    Ver Áreas de Atuação
+                </a>
+            </div>
+            <p class="hero-disclaimer fade-in">Atendimento consultivo presencial ou por videochamada.</p>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span></span>
         </div>
     </header>
 
-    <section class="text-and-image" id="atuacao">
-        <div class="txtimg-son">
-            <h2>Áreas de Atuação</h2>
-            <div class="text-content text-content-1">
-                <!-- Caminho corrigido para assets/img -->
-                <img src="assets/img/criminal.jpeg" alt="Advocacia Preventiva" data-aos="fade-right" data-aos-duration="1500">
-                <div data-aos="fade-up" data-aos-duration="2000">
-                    <h3>Atuação Estratégica e Preventiva</h3>
+    <!-- ===== FAIXA DE CREDIBILIDADE ===== -->
+    <section class="credibility-bar fade-in" aria-label="Diferenciais">
+        <div class="credibility-inner">
+            <div class="cred-item">
+                <strong>Atuação Preventiva</strong>
+                <span>Jurídico como base, não como remédio</span>
+            </div>
+            <div class="cred-divider" aria-hidden="true"></div>
+            <div class="cred-item">
+                <strong>Foco Empresarial</strong>
+                <span>Cível · Trabalhista · Criminal · Aduaneiro</span>
+            </div>
+            <div class="cred-divider" aria-hidden="true"></div>
+            <div class="cred-item">
+                <strong>Assessoria Contínua</strong>
+                <span>Integrada às decisões da diretoria</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
+    <section class="section-alt" id="atuacao" aria-labelledby="h-atuacao">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 id="h-atuacao">Áreas de Atuação</h2>
+                <p class="section-lead">Empresas que crescem de forma sólida entendem que o jurídico é base de crescimento — não custo de emergência.</p>
+            </div>
+
+            <div class="split-block fade-in">
+                <div class="split-media">
+                    <img src="assets/img/criminal.jpeg" alt="Advogadas em ambiente de trabalho" loading="lazy">
+                    <div class="split-media-badge" aria-hidden="true">
+                        <span>Atuação</span>
+                        <strong>Preventiva</strong>
+                    </div>
+                </div>
+                <div class="split-text">
+                    <h3>Inteligência Jurídica para Empresas que Querem Escalar</h3>
                     <p>
-                        Muitos empresários ainda enxergam o jurídico como um custo e só procuram quando o problema já está instalado. Mas empresas que crescem de forma sólida entendem que o jurídico é base de crescimento. Atuamos com inteligência nas frentes Cível, Trabalhista, Criminal Corporativa e Aduaneira.
+                        Muitos empresários procuram o jurídico quando o problema já está instalado. Nós atuamos antes: mapeamos riscos, estruturamos contratos e garantimos que cada decisão operacional tenha amparo legal sólido.
                     </p>
-                    <a href="areas.html" class="btn-secondary">
-                        Ver todas as áreas
-                    </a>
+
+                    <ul class="area-list" aria-label="Áreas de prática">
+                        <li>
+                            <div class="area-dot" aria-hidden="true"></div>
+                            <div>
+                                <strong>Cível Empresarial</strong>
+                                <span>Contratos, responsabilidade civil e litígios societários</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="area-dot" aria-hidden="true"></div>
+                            <div>
+                                <strong>Trabalhista</strong>
+                                <span>Compliance, demissões e defesa em processos</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="area-dot" aria-hidden="true"></div>
+                            <div>
+                                <strong>Criminal Corporativa</strong>
+                                <span>Blindagem de sócios e diretores</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="area-dot" aria-hidden="true"></div>
+                            <div>
+                                <strong>Direito Aduaneiro</strong>
+                                <span>Importação, exportação e regimes especiais</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="areas.html" class="btn-secondary">Ver todas as áreas</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="text-and-image bg-light" id="profissionais">
-        <div class="txtimg-son">
-            <h2>As Sócias</h2>
-            <div class="text-content rito-text">
-                <!-- Caminho corrigido para assets/img -->
-                <img src="assets/img/profissional.jpeg" alt="Sócias Honorato & De Paula" data-aos="fade-left" data-aos-duration="1500">
-                <div data-aos="fade-right" data-aos-duration="1500">
+    <!-- ===== AS SÓCIAS ===== -->
+    <section class="section-light" id="profissionais" aria-labelledby="h-socias">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 id="h-socias">As Sócias</h2>
+                <p class="section-lead">Advogadas especializadas em empresas que não podem se dar ao luxo de descobrir riscos jurídicos tarde demais.</p>
+            </div>
+
+            <div class="split-block split-reverse fade-in">
+                <div class="split-media">
+                    <img src="assets/img/profissional.jpeg" alt="Honorato e De Paula, advogadas sócias" loading="lazy">
+                </div>
+                <div class="split-text">
                     <h3>Honorato & De Paula</h3>
                     <p>
-                        Acreditamos que o atendimento jurídico deve ser claro, próximo e pensado para a realidade de cada negócio. Estruturamos decisões para que sua empresa possa escalar sem passivos ocultos.
+                        Fundamos o escritório com uma convicção: o atendimento jurídico empresarial precisa ser claro, próximo e pensado para a realidade de quem opera uma empresa de verdade.
                     </p>
+                    <p>
+                        Não trabalhamos como um setor isolado. Entramos nas discussões estratégicas, entendemos o modelo de negócio e estruturamos soluções que permitem escalar sem passivos ocultos.
+                    </p>
+                    <div class="quote-block">
+                        <blockquote>
+                            "O jurídico preventivo é o único que cabe no orçamento. O corretivo nunca cabe."
+                        </blockquote>
+                    </div>
+                    <a href="#contato" class="btn-primary">Falar com as Sócias</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="institucional" id="institucional">
-        <h2>O Escritório</h2>
-        <div class="institucional-content">
-            <div class="card-institucional" data-aos="zoom-in" data-aos-delay="100">
-                <img src="assets/img/missao.svg" alt="Visão">
-                <h3>Prevenção</h3>
-                <p>Identificamos e neutralizamos gargalos jurídicos antes que se tornem processos litigiosos custosos para a sua operação.</p>
+    <!-- ===== INSTITUCIONAL ===== -->
+    <section class="section-dark" id="institucional" aria-labelledby="h-escritorio">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 id="h-escritorio">O Escritório</h2>
+                <p class="section-lead section-lead--light">Três pilares que definem nossa forma de trabalhar.</p>
             </div>
-            <div class="card-institucional" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/img/valores.svg" alt="Valores">
-                <h3>Integração</h3>
-                <p>Não somos um setor isolado. Nosso time atua lado a lado com as tomadas de decisão da diretoria da sua empresa.</p>
-            </div>
-            <div class="card-institucional" data-aos="zoom-in" data-aos-delay="300">
-                <img src="assets/img/diferencial.svg" alt="Diferencial">
-                <h3>Crescimento</h3>
-                <p>Garantimos que cada contrato, contratação e operação aduaneira seja um pilar sólido para a expansão do seu faturamento.</p>
+
+            <div class="cards-grid">
+                <article class="card-inst fade-in">
+                    <div class="card-inst-icon" aria-hidden="true">
+                        <img src="assets/img/missao.svg" alt="">
+                    </div>
+                    <h3>Prevenção</h3>
+                    <p>Identificamos e neutralizamos gargalos jurídicos antes que se tornem processos litigiosos custosos para a sua operação.</p>
+                </article>
+                <article class="card-inst fade-in">
+                    <div class="card-inst-icon" aria-hidden="true">
+                        <img src="assets/img/valores.svg" alt="">
+                    </div>
+                    <h3>Integração</h3>
+                    <p>Atuamos lado a lado com as tomadas de decisão da diretoria — não somos um setor isolado acionado só em crises.</p>
+                </article>
+                <article class="card-inst fade-in">
+                    <div class="card-inst-icon" aria-hidden="true">
+                        <img src="assets/img/diferencial.svg" alt="">
+                    </div>
+                    <h3>Crescimento</h3>
+                    <p>Cada contrato, contratação e operação aduaneira estruturada como pilar sólido para a expansão do seu faturamento.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <footer class="contato" id="contato">
-        <h2>Fale Conosco</h2>
-        <div class="contato-son">
-            <div class="content-f">
-                <h6>Sede Corporativa</h6>
-                <p>Curitiba - PR<br>Atendimento consultivo apenas com horário agendado.</p>
-                
-                <h6>Conecte-se</h6>
-                <a href="#" class="social-link"><img src="assets/img/instagram.svg" alt="Instagram">@honoratoedepaula</a>
-                <a href="#" class="social-link"><img src="assets/img/linkedin.svg" alt="LinkedIn">Honorato & De Paula</a>
-                
-                <h6>Contato Direto</h6>
-                <a href="#" class="social-link"><img src="assets/img/whatsapp.svg" alt="WhatsApp">WhatsApp Empresarial</a>
-                <a href="mailto:contato@honoratoedepaula.adv.br" class="social-link"><img src="assets/img/mail.svg" alt="Email">contato@honoratoedepaula.adv.br</a>
+    <!-- ===== CTA INTERMEDIÁRIO ===== -->
+    <section class="cta-mid fade-in" aria-label="Chamada para ação">
+        <div class="container cta-mid-inner">
+            <div class="cta-mid-text">
+                <h2>Seu próximo contrato tem cláusulas que você não percebeu serem um risco?</h2>
+                <p>Agende uma análise prévia com a equipe. Sem compromisso — com clareza.</p>
             </div>
-            <div class="form-container">
-                <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
-                    <label>Nome / Empresa</label>
-                    <input type="text" name="nome" required>
-                    <label>E-mail Corporativo</label>
-                    <input type="email" name="email" required>
-                    <label>Como podemos proteger seu negócio?</label>
-                    <textarea name="mensagem" class="message" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensagem</button>
-                </form>
+            <a href="https://wa.me/5541999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20análise%20jurídica" class="btn-primary btn-primary--large" target="_blank" rel="noopener">
+                Agendar Análise Gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO / FOOTER ===== -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <h2 class="fade-in">Fale Conosco</h2>
+
+            <div class="footer-grid fade-in">
+                <!-- Info -->
+                <div class="footer-info">
+                    <img src="assets/img/logo.png" alt="Honorato & De Paula" class="footer-logo">
+
+                    <div class="footer-block">
+                        <h6>Sede</h6>
+                        <p>Curitiba — PR<br>Atendimento presencial ou por videochamada<br>mediante agendamento.</p>
+                    </div>
+
+                    <div class="footer-block">
+                        <h6>Contato Direto</h6>
+                        <a href="https://wa.me/5541999999999" class="footer-link" target="_blank" rel="noopener">
+                            <img src="assets/img/whatsapp.svg" alt="" aria-hidden="true"> WhatsApp Empresarial
+                        </a>
+                        <a href="mailto:contato@honoratoedepaula.adv.br" class="footer-link">
+                            <img src="assets/img/mail.svg" alt="" aria-hidden="true"> contato@honoratoedepaula.adv.br
+                        </a>
+                    </div>
+
+                    <div class="footer-block">
+                        <h6>Redes</h6>
+                        <a href="#" class="footer-link">
+                            <img src="assets/img/instagram.svg" alt="" aria-hidden="true"> @honoratoedepaula
+                        </a>
+                        <a href="#" class="footer-link">
+                            <img src="assets/img/linkedin.svg" alt="" aria-hidden="true"> Honorato & De Paula
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="footer-form-wrap">
+                    <p class="form-intro">Prefere enviar uma mensagem? Responderemos em até 24 horas úteis.</p>
+                    <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST" class="contact-form" novalidate>
+                        <div class="field-group">
+                            <label for="f-nome">Nome / Empresa</label>
+                            <input type="text" id="f-nome" name="nome" placeholder="João Silva | Empresa SA" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="f-email">E-mail Corporativo</label>
+                            <input type="email" id="f-email" name="email" placeholder="joao@empresa.com.br" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="f-telefone">Telefone (opcional)</label>
+                            <input type="tel" id="f-telefone" name="telefone" placeholder="(41) 99999-9999">
+                        </div>
+                        <div class="field-group">
+                            <label for="f-mensagem">Como podemos proteger seu negócio?</label>
+                            <textarea id="f-mensagem" name="mensagem" rows="5" placeholder="Descreva brevemente sua situação ou dúvida jurídica..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">
+                            Enviar Mensagem
+                        </button>
+                        <p class="form-note">Sigilo garantido. Suas informações nunca serão compartilhadas.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Honorato & De Paula Advocacia. Todos os direitos reservados.</p>
+                <p class="oab-note">OAB/PR — Advocacia Estratégica e Preventiva</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/menuButton.js"></script>
-    <script src="assets/js/stickyScroll.js"></script>
     <script>
-        AOS.init();
+        // Ano dinâmico
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Sticky nav
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('sticky', window.scrollY > 60);
+        }, { passive: true });
+
+        // Menu mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.classList.toggle('open', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+
+        // Fecha menu ao clicar em link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Fecha menu ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && navLinks.classList.contains('open')) {
+                navLinks.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Animações de entrada por scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>

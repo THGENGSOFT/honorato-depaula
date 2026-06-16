@@ -258,8 +258,9 @@
 
                 <!-- Formulário -->
                 <div class="footer-form-wrap">
-                    <p class="form-intro">Prefere enviar uma mensagem? Responderemos em até 24 horas úteis.</p>
-                    <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST" class="contact-form" novalidate>
+                    <p class="form-intro">Prefere enviar uma mensagem direta? Preencha os dados e fale conosco instantaneamente por WhatsApp.</p>
+                    
+                    <form id="whatsapp-form" class="contact-form" onsubmit="return false;" novalidate>
                         <div class="field-group">
                             <label for="f-nome">Nome / Empresa</label>
                             <input type="text" id="f-nome" name="nome" placeholder="João Silva | Empresa SA" required>
@@ -269,17 +270,18 @@
                             <input type="email" id="f-email" name="email" placeholder="joao@empresa.com.br" required>
                         </div>
                         <div class="field-group">
-                            <label for="f-telefone">Telefone (opcional)</label>
-                            <input type="tel" id="f-telefone" name="telefone" placeholder="(41) 99999-9999">
+                            <label for="f-telefone">Telefone / Celular</label>
+                            <input type="tel" id="f-telefone" name="telefone" placeholder="(41) 99999-9999" required>
                         </div>
                         <div class="field-group">
                             <label for="f-mensagem">Como podemos proteger seu negócio?</label>
                             <textarea id="f-mensagem" name="mensagem" rows="5" placeholder="Descreva brevemente sua situação ou dúvida jurídica..." required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary btn-submit">
-                            Enviar Mensagem
+                        
+                        <button type="button" id="btn-send-whatsapp" class="btn-primary btn-submit">
+                            Iniciar Conversa no WhatsApp
                         </button>
-                        <p class="form-note">Sigilo garantido. Suas informações nunca serão compartilhadas.</p>
+                        <p class="form-note">Sigilo garantido. Suas informações estarão protegidas por sigilo profissional.</p>
                     </form>
                 </div>
             </div>
@@ -291,6 +293,7 @@
         </div>
     </footer>
 
+    <!-- Script limpo e corrigido -->
     <script>
         // Ano dinâmico
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -342,6 +345,36 @@
         }, { threshold: 0.12 });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ===== CONSOLIDAÇÃO E ENVIO VIA WHATSAPP =====
+        document.getElementById('btn-send-whatsapp').addEventListener('click', () => {
+            // Captura os valores dos inputs
+            const nome = document.getElementById('f-nome').value.trim();
+            const email = document.getElementById('f-email').value.trim();
+            const telefone = document.getElementById('f-telefone').value.trim();
+            const mensagem = document.getElementById('f-mensagem').value.trim();
+
+            // Validação simples
+            if (!nome || !email || !telefone || !mensagem) {
+                alert('Por favor, preencha todos os campos para iniciar o atendimento.');
+                return;
+            }
+
+            // O número das advogadas (ajuste conforme necessário, apenas números com 55 na frente)
+            const numeroWhatsapp = "5541999999999"; 
+
+            // Montagem do texto consolidado (usando %0A para quebras de linha e * para negrito no WhatsApp)
+            const textoMensagem = 
+                `*Novo Contato Corporativo — Website*` + `%0A%0A` +
+                `*Nome/Empresa:* ${nome}` + `%0A` +
+                `*E-mail:* ${email}` + `%0A` +
+                `*Telefone:* ${telefone}` + `%0A%0A` +
+                `*Situação:*` + `%0A` + `${mensagem}`;
+
+            // Abre a URL do WhatsApp API
+            const urlFormatada = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${textoMensagem}`;
+            window.open(urlFormatada, '_blank');
+        });
     </script>
 </body>
 </html>

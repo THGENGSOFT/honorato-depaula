@@ -46,6 +46,35 @@
     box-sizing: border-box;
 }
 
+/* O Segredo para travar o "descolamento" de tela em celulares */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--surface-warm);
+    color: var(--text-dark);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font-family: var(--font-body); }
+
 html { scroll-behavior: smooth; }
 
 body {
